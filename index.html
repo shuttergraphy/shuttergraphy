@@ -18,29 +18,29 @@
       padding-top: 40px;
       font-size: 2.5rem;
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-      width: 100vw;
-      margin: 0;
-    }
-    .gallery img {
+    .hero {
       width: 100vw;
       height: 100vh;
-      object-fit: cover;
-      display: block;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   </style>
 </head>
 <body>
   <h1>Welcome to ShutterGraphy</h1>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Nature Abstract">
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Moody Landscape">
-    <img src="https://images.unsplash.com/photo-1549921296-3a9981daaa4e" alt="Night Street">
-    <img src="https://images.unsplash.com/photo-1516251193007-45ef944ab0c6" alt="Golden Silhouette">
-  </div>
+  <div class="hero" id="hero"></div>
+
+  <script>
+    const images = [
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", // now first
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+      "https://images.unsplash.com/photo-1549921296-3a9981daaa4e"
+    ];
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+    document.getElementById("hero").style.backgroundImage = `url('${randomImage}')`;
+  </script>
 </body>
 </html>
-
