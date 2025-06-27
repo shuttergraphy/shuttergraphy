@@ -5,36 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ShutterGraphy</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     html, body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #111;
       color: white;
-      box-sizing: border-box;
     }
     .hero {
-      width: 100vw;
       height: 100vh;
+      width: 100vw;
       background-color: #222;
       background-size: cover;
       background-position: center;
       display: flex;
-      align-items: flex-start;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
       transition: background-image 0.8s ease-in-out;
-      position: relative;
     }
     .heading-box {
       background-color: #525F61;
-      padding: 15px 20px;
-      width: 100%;
-      text-align: center;
+      padding: 15px 30px;
+      margin-top: 20px;
+      border-radius: 6px;
     }
     h1 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin: 0;
-      line-height: 1.2;
+    }
+    .nav-buttons {
+      margin-top: 40px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav-buttons a {
+      text-decoration: none;
+      color: white;
+      background-color: #007bff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    .nav-buttons a:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
@@ -42,6 +61,12 @@
   <div class="hero" id="hero">
     <div class="heading-box">
       <h1>Welcome to ShutterGraphy</h1>
+    </div>
+    <div class="nav-buttons">
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#login">Login</a>
     </div>
   </div>
 
