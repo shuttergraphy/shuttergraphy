@@ -71,11 +71,26 @@
     }
     .platform-section p {
       max-width: 700px;
-      margin: 0 auto;
+      margin: 0 auto 40px;
       font-size: 1rem;
       line-height: 1.6;
     }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #007bff;
+    }
   </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="hero" id="hero">
@@ -94,6 +109,12 @@
     <p>
       Join a creative community, list your work for global exposure, and connect with enthusiasts and buyers. Our tools help photographers thrive in today’s visual economy.
     </p>
+    <div class="social-icons">
+      <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
   </div>
 
   <script>
