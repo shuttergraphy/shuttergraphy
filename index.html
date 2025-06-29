@@ -36,24 +36,6 @@
       font-size: 1.5rem;
       margin: 0;
     }
-    .nav-buttons {
-      margin-top: 40px;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .nav-buttons a {
-      text-decoration: none;
-      color: white;
-      padding: 10px 20px;
-      border: 1px solid white;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-    .nav-buttons a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
   </style>
 </head>
 <body>
@@ -61,12 +43,7 @@
     <div class="heading-box">
       <h1>Welcome to ShutterGraphy</h1>
     </div>
-    <div class="nav-buttons">
-      <a href="#gallery">Gallery</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#login">Login</a>
-    </div>
+    <div id="nav-placeholder"></div>
   </div>
 
   <script>
@@ -77,6 +54,11 @@
     ];
     const randomImage = images[Math.floor(Math.random() * images.length)];
     document.getElementById("hero").style.backgroundImage = `url('${randomImage}')`;
+
+    // Load navigation from external nav.html file
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("nav-placeholder").innerHTML = data);
   </script>
 </body>
 </html>
